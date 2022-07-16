@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    stages {
+        stage('Run script') {
+            steps {
+               sh 'python3 hello.py'
+            }
+        }
+        stage('Stop process') {
+            steps {
+                sh 'echo "process stopped"'
+            }
+        }
+
+    }
+}
