@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Run script') {
             steps {
+               sh 'REQUEST="weeklyLeaderboard"'
                sh 'python3 hello.py'
             }
         }
